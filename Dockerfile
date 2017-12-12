@@ -7,6 +7,9 @@ FROM rocker/tidyverse
 # then install the ezknitr packages
 RUN Rscript -e "install.packages('ezknitr', repos = 'https://mran.revolutionanalytics.com/snapshot/2017-12-11')"
 
+
+RUN Rscript -e "install.packages('forcats', repos = 'http://cran.us.r-project.org')"
+
 # install python 3
 RUN apt-get update \
   && apt-get install -y python3-pip python3-dev \
